@@ -8,30 +8,47 @@
 	</head>
 
 	<body>
+		
 		<div class="header">
 			<h1 class="title">Bakaq</h1>
 			<div class="header-right">
-					<div class="language-wrapper">
-					<label for="language-picker" class="localized">
-						<span lang="en">
-							Language:
-						</span>
-						<span lang="pt">
-							Língua:
-						</span>
-						<span lang="tok">
-							toki:
-						</span>
-					</label>
-					<select name="language" id="language-picker">
-						<option value="en" selected>English</option>
-						<option value="pt">Português</option>
-						<option value="tok">toki pona</option>
-					</select>
-				</div>
 			</div>
 		</div>
-	
+
+	<div class="nav">
+		<div class="nav-wrapper">
+			<a href="#donate" class="button localized">
+				<span lang="en">
+					Donate
+				</span>
+				<span lang="pt">
+					Doações
+				</span>
+				<span lang="tok">
+					pana e mani
+				</span>
+			</a>
+		</div>
+		<div class="language-wrapper">
+			<label for="language-picker" class="localized">
+				<span lang="en">
+					Language:
+				</span>
+				<span lang="pt">
+					Língua:
+				</span>
+				<span lang="tok">
+					toki:
+				</span>
+			</label>
+			<select name="language" id="language-picker">
+				<option value="en" selected>English</option>
+				<option value="pt">Português</option>
+				<option value="tok">toki pona</option>
+			</select>
+		</div>
+	</div>
+
 		<div class="content">
 			<p class="localized">
 				<span lang="en">
@@ -61,8 +78,7 @@
 
 			<div class="portfolio">
 				
-				<div class="portfolio-item">
-					<a href="https://bakaq.github.io/mandelbrot-webgl/">
+				<a href="https://bakaq.github.io/mandelbrot-webgl/" class="portfolio-item button">
 						<img src="mandelbrot.png" class="portfolio-thumb">
 						<h2 class="portfolio-title">Mandelbrot</h2>
 						<p class="portfolio-description localized">
@@ -81,10 +97,33 @@
 								ilo JavaScript en ilo WebGL.
 							</span>
 						</p>
-					</a>
-				</div>
-			
+				</a>	
 			</div>
+
+			<h2 id="donate" class="localized">
+				<span lang="en">
+					Donate:
+				</span>
+				<span lang="pt">
+					Doações:
+				</span>
+				<span lang="tok">
+					pana e mani:
+				</span>
+			</h2>
+
+			<p class="localized">
+				<span lang="en">	
+					This site accepts donations via BAT.
+				</span>
+				<span lang="pt">	
+					Esse site aceita doações via BAT.
+				</span>
+				<span lang="tok">	
+					lipu ni la sina ken pana e mani BAT tawa mi.
+				</span>
+			</p>
+
 		</div>
 
 		<div class="footer localized">
@@ -99,7 +138,6 @@
 			</span>
 		</div>
 	</body>
-
 
 	<script>
 		function localize(lang) {

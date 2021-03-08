@@ -3,7 +3,8 @@
 	/* Colors */
 	--background-c: #CCC;
 	--content-c: #FEB;
-	--portfolio-c: #7BE;
+	--button-c: #7BE;
+	--button-hover-c: #5BF;
 
 	/* Padding and border-radius */
 	--spacing: 0.5em;
@@ -38,6 +39,25 @@ body > * {
 	display: unset;
 }
 
+
+.button {
+	border-radius: var(--spacing);
+	padding: var(--spacing);
+	background-color: var(--button-c);
+}
+
+.button:hover {
+	background-color: var(--button-hover-c);
+}
+
+.button:link, .button:visited {
+	text-decoration: none;
+	color: #000;
+}
+
+
+/*** Header ***/
+
 .header {
 	position: relative;
 	margin-bottom: var(--spacing);
@@ -58,6 +78,32 @@ body > * {
 	justify-content: flex-end;
 }
 
+
+/*** Navbar ***/
+
+.nav {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+
+	padding: var(--spacing);
+	background-color: var(--content-c);
+	margin-bottom: var(--spacing);
+	border-radius: var(--spacing);
+	box-sizing: border-box;
+}
+
+.nav-wrapper {
+	display: flex;
+	flex-flow: row nowrap;
+}
+
+.nav-wrapper > a {
+	box-sizing: border-box;
+	font-size: 1.1em;
+	font-weight: bold;
+}
+
 .language-wrapper {
 	display: flex;
 	flex-flow: column nowrap;
@@ -66,6 +112,8 @@ body > * {
 #language-picker {
 	border-radius: 2px;
 }
+
+/*** Content ***/
 
 .content {
 	box-sizing: border-box;
@@ -88,17 +136,9 @@ body > * {
 }
 
 .portfolio-item {
-	background-color: var(--portfolio-c);
-	border-radius: var(--spacing);
-	padding: var(--spacing);
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-}
-
-.portfolio-item > a:link, a:visited {
-	text-decoration: none;
-	color: #000;
 }
 
 .portfolio-thumb {
