@@ -1,11 +1,24 @@
+/* Global Variables */
+:root {
+	/* Colors */
+	--background-c: #CCC;
+	--content-c: #FEB;
+	--portfolio-c: #7BE;
+
+	/* Padding and border-radius */
+	--spacing: 8px;
+}
+
+
 html {
 	height: 100%;
+	font-size: 16px;
 }
 
 body {
-	background-color: #CCC;
+	background-color: var(--background-c);
 	margin: 0;
-	padding: 8px;
+	padding: var(--spacing);
 	height: 100%;
 	box-sizing: border-box;
 }
@@ -21,9 +34,9 @@ body {
 }
 
 .content {
-	padding: 8px;
-	border-radius: 8px;
-	background-color: #FEB;
+	padding: var(--spacing);
+	border-radius: var(--spacing);
+	background-color: var(--content-c);
 	width: 95%;
 }
 
@@ -37,14 +50,14 @@ body {
 
 .portfolio {
 	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	grid-gap: 10px;
+	grid-template-columns: repeat(1, 1fr);
+	grid-gap: var(--spacing);
 }
 
 .portfolio-item {
-	background-color: #7BE;
-	border-radius: 8px;
-	padding: 8px;
+	background-color: var(--portfolio-c);
+	border-radius: var(--spacing);
+	padding: var(--spacing);
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
@@ -56,7 +69,7 @@ body {
 }
 
 .portfolio-thumb {
-	border-radius: 8px;
+	border-radius: var(--spacing);
 	display: block;
 	max-width: 100%;
 	width: auto;
@@ -70,4 +83,24 @@ body {
 
 .portfolio-description {
 	margin: 0;
+}
+
+/*** Media Queries ***/
+
+@media only screen and (min-width: 600px) {
+	.portfolio {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media only screen and (min-width: 786px) {
+	.portfolio {
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+
+@media only screen and (min-width: 992px) {
+	.portfolio {
+		grid-template-columns: repeat(4, 1fr);
+	}
 }
