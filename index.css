@@ -21,30 +21,53 @@ body {
 	padding: var(--spacing);
 	height: 100%;
 	box-sizing: border-box;
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: center;
+}
+
+body > * {
+	width: 95%;
+}
+
+[lang] {
+	display: none;
+}
+
+[lang=en] {
+	display: unset;
 }
 
 .header {
-	text-align: center;
+	position: relative;
+	margin-bottom: var(--spacing);
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
 }
 
-.content-wrapper {
+.title {
+	text-align: center;
+	margin: 0;
+	grid-column: 2;
+}
+
+.header-right {
 	display: flex;
-	justify-content: center;
-	width: 100%;
+	align-items: center;
+	justify-content: flex-end;
 }
 
 .content {
+	box-sizing: border-box;
 	padding: var(--spacing);
 	border-radius: var(--spacing);
 	background-color: var(--content-c);
-	width: 95%;
 }
 
 .footer {
 	padding: 0.5em 0;
 	position: relative;
 	bottom: 0;
-	width: 100%;
 	text-align: center;
 }
 

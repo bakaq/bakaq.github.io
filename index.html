@@ -10,57 +10,98 @@
 	<body>
 		<div class="header">
 			<h1 class="title">Bakaq</h1>
+			<div class="header-right">
+				<label for="language-picker" class="localized">
+					<span lang="en">
+						Language:
+					</span>
+					<span lang="pt">
+						Língua:
+					</span>
+				</label>
+				<select name="language" id="language-picker">
+					<option value="en" selected>English</option>
+					<option value="pt">Português</option>
+				</select>
+			</div>
 		</div>
 	
-		<div class="content-wrapper">
-			<div class="content">
-				<p>
+		<div class="content">
+			<p class="localized">
+				<span lang="en">
 					Hello, I'm a physics student interested in a wide range
 					of subjects, including music and computer science.
-				</p>
+				</span>
+				<span lang="pt">
+					Olá, eu sou um estudante de física interessado em vários assuntos,
+					incluindo música e ciencias da computação.
+				</span>
+			</p>
 
-				<h2>Interactive stuff on browser:</h2>
+			<h2 class="localized">
+				<span lang="en">
+					Interactive stuff on browser:
+				</span>
+				<span lang="pt">
+					Coisas interativas no navegador:
+				</span>
+			</h2>
 
-				<div class="portfolio">
-					<div class="portfolio-item">
-						<a href="https://bakaq.github.io/mandelbrot-webgl/">
-							<img src="mandelbrot.png" class="portfolio-thumb">
-							<h2 class="portfolio-title">Mandelbrot</h2>
-							<p class="portfolio-description">An intractive mandelbrot visualization written with JavaScript and WebGL.</p>
-						</a>
-					</div>
-	
-					<!--
-					<div class="portfolio-item">
-						<a href="https://bakaq.github.io/mandelbrot-webgl/">
-							<img src="mandelbrot.png" class="portfolio-thumb">
-							<h2 class="portfolio-title">Mandelbrot</h2>
-							<p class="portfolio-description">An intractive mandelbrot visualization written with JavaScript and WebGL.</p>
-						</a>
-					</div>
-					
-					<div class="portfolio-item">
-						<a href="https://bakaq.github.io/mandelbrot-webgl/">
-							<img src="mandelbrot.png" class="portfolio-thumb">
-							<h2 class="portfolio-title">Mandelbrot</h2>
-							<p class="portfolio-description">An intractive mandelbrot visualization written with JavaScript and WebGL.</p>
-						</a>
-					</div>
-					
-					<div class="portfolio-item">
-						<a href="https://bakaq.github.io/mandelbrot-webgl/">
-							<img src="mandelbrot.png" class="portfolio-thumb">
-							<h2 class="portfolio-title">Mandelbrot</h2>
-							<p class="portfolio-description">An intractive mandelbrot visualization written with JavaScript and WebGL.</p>
-						</a>
-					</div>
-					-->
+			<div class="portfolio">
+				
+				<div class="portfolio-item">
+					<a href="https://bakaq.github.io/mandelbrot-webgl/">
+						<img src="mandelbrot.png" class="portfolio-thumb">
+						<h2 class="portfolio-title">Mandelbrot</h2>
+						<p class="portfolio-description localized">
+							<span lang="en">
+								An intractive mandelbrot visualization
+								written with JavaScript and WebGL.
+							</span>
+							<span lang="pt">
+								Uma vizualização interativa do mandelbrot
+								escrita em JavaScript e WebGL.
+							</span>
+						</p>
+					</a>
 				</div>
+			
 			</div>
 		</div>
 
-		<div class="footer">
-			footer thing idk
+		<div class="footer localized">
+			<span lang="en">
+				footer thing idk
+			</span>
+			<span lang="pt">
+				rodapé ou sei lá
+			</span>
 		</div>
 	</body>
+
+
+	<script>
+		function localize(lang) {
+			for (txt of document.querySelectorAll(".localized")) {
+				let needs_default = true;
+				
+				for (trad of txt.children) {
+					if (trad.lang == lang) {
+						needs_default = false;
+						trad.style.display = "unset";
+					} else {
+						trad.style.display = "none";
+					}
+				}
+
+				if (needs_default) {
+					txt.querySelector("[lang=en]").style.display = "unset";
+				}
+			}
+		}
+
+		document.getElementById("language-picker").onchange = function(e) {
+			localize(e.target.value);
+		};
+	</script>
 </html>
