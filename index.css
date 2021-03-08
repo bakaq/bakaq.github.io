@@ -6,7 +6,7 @@
 	--portfolio-c: #7BE;
 
 	/* Padding and border-radius */
-	--spacing: 8px;
+	--spacing: 0.5em;
 }
 
 
@@ -53,8 +53,18 @@ body > * {
 
 .header-right {
 	display: flex;
+	flex-flow: row nowrap;
 	align-items: center;
 	justify-content: flex-end;
+}
+
+.language-wrapper {
+	display: flex;
+	flex-flow: column nowrap;
+}
+
+#language-picker {
+	border-radius: 2px;
 }
 
 .content {
