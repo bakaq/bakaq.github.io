@@ -123,6 +123,17 @@
 					lipu ni la sina ken pana e mani BAT tawa mi.
 				</span>
 			</p>
+			
+			<p class="localized">
+				<span lang="en">	
+					Monero:
+				</span>
+				<span lang="tok">	
+					mani Monero:
+				</span>
+				
+				<span style="font-size: 0.7em; word-wrap: break-word;">42jHqUsEke6V9w9pcHZiGf3NNPd6ZiRiZUAxZ3YuML7CinY3RJqWaS4CQB2JisXVwn5h7kx9WwSoDifgiEW6j4C5JGd93Mz</span>
+			</p>
 
 		</div>
 
@@ -145,6 +156,9 @@
 				let needs_default = true;
 				
 				for (trad of txt.children) {
+					if (trad.lang == "") {
+						continue;
+					}
 					if (trad.lang == lang) {
 						needs_default = false;
 						trad.style.display = "unset";
