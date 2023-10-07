@@ -103,7 +103,7 @@ main {
   background-color: var(--content-c);
 }
 
-.footer {
+footer {
   padding: 0.5em 0;
   position: relative;
   bottom: 0;
