@@ -6,208 +6,97 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 	</head>
-
 	<body>
-		
-		<div class="header">
-			<h1 class="title">Bakaq</h1>
-			<div class="header-right">
-			</div>
-		</div>
+        <header>
+            <h1 class="title">Bakaq</h1>
+        </header>
 
-	<div class="nav">
-		<div class="nav-wrapper">
-			<a href="#donate" class="button localized">
-				<span lang="en">
-					Donate
-				</span>
-				<span lang="pt">
-					Doações
-				</span>
-				<span lang="tok">
-					pana e mani
-				</span>
-			</a>
-		</div>
-		<div class="language-wrapper">
-			<label for="language-picker" class="localized">
-				<span lang="en">
-					Language:
-				</span>
-				<span lang="pt">
-					Língua:
-				</span>
-				<span lang="tok">
-					toki:
-				</span>
-			</label>
-			<select name="language" id="language-picker">
-				<option value="en" selected>English</option>
-				<option value="pt">Português</option>
-				<option value="tok">toki pona</option>
-			</select>
-		</div>
-	</div>
+        <nav>
+            <div class="subnav">
+                <a href="https://blog.bakaq.net" class="button">Blog</a>
+            </div>
+            <div class="subnav">
+                <a href="#donate" class="button">Donate</a>
+            </div>
+        </nav>
 
-		<div class="content">
-			<p class="localized">
-				<span lang="en">
-					Hello, I'm a physics student interested in a wide range
-					of subjects, including music and computer science.
-				</span>
-				<span lang="pt">
-					Olá, eu sou um estudante de física interessado em vários assuntos,
-					incluindo música e ciencias da computação.
-				</span>
-				<span lang="tok">
-					toki. mi jan sona pi sona Pisika. mi wile sona e sona mute sama ni: kalama musi en sona pi ilo sona.
-				</span>
+		<main>
+			<p>
+                I'm a physics student interested in a wide range
+                of subjects, including music, web dev, logic programming and linguistics.
 			</p>
 
-			<h2 class="localized">
-				<span lang="en">
-					Interactive stuff on browser:
-				</span>
-				<span lang="pt">
-					Coisas interativas no navegador:
-				</span>
-				<span lang="tok">
-					sina ken kepeken musi e ni:
-				</span>
-			</h2>
+            <section>
+                <h2>Interactive stuff on browser:</h2>
 
-			<div class="portfolio">
-				
-				<a href="https://bakaq.github.io/mandelbrot-webgl/" class="portfolio-item button">
-						<img src="images/mandelbrot.png" class="portfolio-thumb">
-						<h2 class="portfolio-title localized">
-							<span lang="en">
-								Mandelbrot
-							</span>
-							<span lang="tok">
-								kulupu Mandelbrot
-							</span>
-						</h2>
-						<p class="portfolio-description localized">
-							<span lang="en">
-								An intractive mandelbrot visualization
-								written with JavaScript and WebGL.
-							</span>
-							<span lang="pt">
-								Uma vizualização interativa do mandelbrot
-								escrita em JavaScript e WebGL.
-							</span>
-							<span lang="tok">
-								lukin e sitelen Mandelbrot.
-								sina ken kepeken musi e ona.
-								mi pali e ona kepeken ni:
-								ilo JavaScript en ilo WebGL.
-							</span>
-						</p>
-				</a>	
-				
-				<a href="https://bakaq.github.io/quantum-simulator/" class="portfolio-item button">
-						<img src="images/default.png" class="portfolio-thumb">
-						<h2 class="portfolio-title localized">
-							<span lang="en">
-								Quantum Simulator
-							</span>
-							<span lang="pt">
-								Simulador Quântico
-							</span>
-							<span lang="tok">
-								ijo pi pali sama pi ijo sona nasa
-							</span>
-						</h2>
-						<p class="portfolio-description localized">
-							<span lang="en">
-								A quantum computer simulator.
-							</span>
-							<span lang="pt">
-								Um simulador de computador quântico.
-							</span>
-							<span lang="tok">
-								ijo ni li pali e ijo sama pi ijo sona nasa.
-							</span>
-						</p>
-				</a>	
-			</div>
+                <div class="portfolio">
+                    <a href="/kanji-search" class="portfolio-item button">
+                        <img src="images/default.png"
+                             alt="No image for this project"
+                             class="portfolio-thumb">
+                        <h3 class="portfolio-title">
+                            Kanji Search
+                        </h3>
+                        <p class="portfolio-description">
+                            A tool to search for kanji by components.
+                        </p>
+                    </a>	
 
-			<h2 id="donate" class="localized">
-				<span lang="en">
-					Donate:
-				</span>
-				<span lang="pt">
-					Doações:
-				</span>
-				<span lang="tok">
-					pana e mani:
-				</span>
-			</h2>
+                    <a href="/mandelbrot-webgl" class="portfolio-item button">
+                        <img src="images/mandelbrot.png"
+                             alt="The Mandelbrot set"
+                             class="portfolio-thumb">
+                        <h3 class="portfolio-title">
+                            Mandelbrot
+                        </h3>
+                        <p class="portfolio-description">
+                            An intractive mandelbrot visualization
+                            written with JavaScript and WebGL.
+                        </p>
+                    </a>	
+                    
+                    <a href="/quantum-simulator" class="portfolio-item button">
+                        <img src="images/default.png"
+                             alt="No image for this project"
+                             class="portfolio-thumb">
+                        <h3 class="portfolio-title">
+                            Quantum Simulator
+                        </h3>
+                        <p class="portfolio-description">
+                            A quantum computer simulator.
+                        </p>
+                    </a>	
 
-			<p class="localized">
-				<span lang="en">	
-					This site accepts donations via BAT.
-				</span>
-				<span lang="pt">	
-					Esse site aceita doações via BAT.
-				</span>
-				<span lang="tok">	
-					lipu ni la sina ken pana e mani BAT tawa mi.
-				</span>
-			</p>
-			
-			<p class="localized">
-				<span lang="en">	
-					Monero:
-				</span>
-				<span lang="tok">	
-					mani Monero:
-				</span>
-				
-				<span style="font-size: 0.7em; word-wrap: break-word;">42jHqUsEke6V9w9pcHZiGf3NNPd6ZiRiZUAxZ3YuML7CinY3RJqWaS4CQB2JisXVwn5h7kx9WwSoDifgiEW6j4C5JGd93Mz</span>
-			</p>
+                    <a href="/collatz-tree" class="portfolio-item button">
+                        <img src="images/default.png"
+                             alt="No image for this project"
+                             class="portfolio-thumb">
+                        <h3 class="portfolio-title">
+                            Collatz Tree
+                        </h3>
+                        <p class="portfolio-description">
+                            An interective visualization of the Collatz conjecture
+                            as a tree.
+                        </p>
+                    </a>	
+                </div>
+            </section>
 
-		</div>
+            <section>
+                <h2 id="donate">Donate:</h2>
 
-		<div class="footer localized">
-			<span lang="en">
-				footer thing idk
-			</span>
-			<span lang="pt">
-				rodapé ou sei lá
-			</span>
-			<span lang="tok">
-				noka lipu
-			</span>
-		</div>
+                <ul>
+                    <li>This site accepts donations via BAT.</li>
+			        <li>
+                        Monero:
+                        
+                        <span style="font-size: 0.7em; word-wrap: break-word;">42jHqUsEke6V9w9pcHZiGf3NNPd6ZiRiZUAxZ3YuML7CinY3RJqWaS4CQB2JisXVwn5h7kx9WwSoDifgiEW6j4C5JGd93Mz</span>
+                    </li>
+                </ul>
+            </section>
+
+		</main>
+
+		<footer>footer thing idk</footer>
 	</body>
-
-	<script>
-		function localize(lang) {
-			for (txt of document.querySelectorAll(".localized")) {
-				let needs_default = true;
-				
-				for (trad of txt.children) {
-					if (trad.lang == "") {
-						continue;
-					}
-					if (trad.lang == lang) {
-						needs_default = false;
-						trad.style.display = "unset";
-					} else {
-						trad.style.display = "none";
-					}
-				}
-
-				if (needs_default) {
-					txt.querySelector("[lang=en]").style.display = "unset";
-				}
-			}
-		}
-
-		document.getElementById("language-picker").onchange = function(e) {
-			localize(e.target.value);
-		};
-	</script>
 </html>
