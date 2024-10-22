@@ -1,13 +1,26 @@
 /* Global Variables */
+
 :root {
   /* Colors */
-  --background-c: #CCC;
-  --content-c: #FEB;
-  --button-c: #7BE;
-  --button-hover-c: #5BF;
+  --background-color: #000;
+  --content-background-color: #0d1117;
+  --button-c: #238636;
+  --button-hover-c: #29903b;
+  --text-color: #FFF;
 
   /* Padding and border-radius */
-  --spacing: 0.5rem;
+  --spacing: 0.5em;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Colors */
+    --background-color: #CCC;
+    --content-background-color: #FEB;
+    --button-c: #7BE;
+    --button-hover-c: #5BF;
+    --text-color: #000;
+  }
 }
 
 * {
@@ -15,7 +28,7 @@
 }
 
 body {
-  background-color: var(--background-c);
+  background-color: var(--background-color);
   margin: 0;
   padding: var(--spacing);
   display: flex;
@@ -41,7 +54,7 @@ nav {
   gap: var(--spacing);
 
   padding: var(--spacing);
-  background-color: var(--content-c);
+  background-color: var(--content-background-color);
   border-radius: var(--spacing);
 }
 
@@ -69,7 +82,7 @@ footer {
 main {
   padding: var(--spacing);
   border-radius: var(--spacing);
-  background-color: var(--content-c);
+  background-color: var(--content-background-color);
 }
 
 /*** Porfolio ***/
