@@ -1,111 +1,82 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Bakaq</title>
-		<link rel="stylesheet" href="/index.css">
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-	</head>
+{{ define "main" }}
+  <p>
+  I'm a physicist interested in a wide range of subjects, including music,
+  web dev, logic programming and linguistics.
+  </p>
 
-	<body>
-    <header>
-      <h1 class="title">Bakaq</h1>
-    </header>
+  <section>
+    <h2>Interactive stuff on browser:</h2>
 
-    <nav>
-      <div class="subnav">
-        <a href="https://blog.bakaq.net" class="button">Blog</a>
-        <a href="https://github.com/bakaq" class="button">Github</a>
-      </div>
-      <div class="subnav">
-        <a href="#donate" class="button">Donate</a>
-      </div>
-    </nav>
+    <div class="portfolio">
+      <a href="/kanji-search" class="portfolio-item button">
+        <img src="images/kanji-search.png"
+           alt="An example of a search for a kanji with 2 components"
+           class="portfolio-thumb"
+           width="325"
+           height="325">
+        <h3 class="portfolio-title">
+          Kanji Search
+        </h3>
+        <p class="portfolio-description">
+          A tool to search for kanji by components.
+        </p>
+      </a>	
 
-		<main>
-			<p>
-        I'm a physicist interested in a wide range of subjects, including music,
-        web dev, logic programming and linguistics.
-			</p>
+      <a href="/mandelbrot-webgl" class="portfolio-item button">
+        <img src="images/mandelbrot.png"
+           alt="The Mandelbrot set"
+           class="portfolio-thumb"
+           width="325"
+           height="325">
+        <h3 class="portfolio-title">
+          Mandelbrot
+        </h3>
+        <p class="portfolio-description">
+          An intractive mandelbrot visualization
+          written with JavaScript and WebGL.
+        </p>
+      </a>	
+      
+      <a href="/quantum-simulator" class="portfolio-item button">
+        <img src="images/quantum-simulator.png"
+           alt="Quantum simulator interface"
+           class="portfolio-thumb"
+           width="325"
+           height="325">
+        <h3 class="portfolio-title">
+          Quantum Simulator
+        </h3>
+        <p class="portfolio-description">
+          A quantum computer simulator.
+        </p>
+      </a>	
 
-      <section>
-        <h2>Interactive stuff on browser:</h2>
+      <a href="/collatz-tree" class="portfolio-item button">
+        <img src="images/collatz.png"
+           alt="Tree visualization of the Collatz conjecture"
+           class="portfolio-thumb"
+           width="325"
+           height="325">
+        <h3 class="portfolio-title">
+          Collatz Tree
+        </h3>
+        <p class="portfolio-description">
+          An interective visualization of the Collatz conjecture as a tree.
+        </p>
+      </a>	
+    </div>
+  </section>
 
-        <div class="portfolio">
-          <a href="/kanji-search" class="portfolio-item button">
-            <img src="images/kanji-search.png"
-               alt="An example of a search for a kanji with 2 components"
-               class="portfolio-thumb"
-               width="325"
-               height="325">
-            <h3 class="portfolio-title">
-              Kanji Search
-            </h3>
-            <p class="portfolio-description">
-              A tool to search for kanji by components.
-            </p>
-          </a>	
+  <section>
+    <h2 id="donate">Donate:</h2>
 
-          <a href="/mandelbrot-webgl" class="portfolio-item button">
-            <img src="images/mandelbrot.png"
-               alt="The Mandelbrot set"
-               class="portfolio-thumb"
-               width="325"
-               height="325">
-            <h3 class="portfolio-title">
-              Mandelbrot
-            </h3>
-            <p class="portfolio-description">
-              An intractive mandelbrot visualization
-              written with JavaScript and WebGL.
-            </p>
-          </a>	
-          
-          <a href="/quantum-simulator" class="portfolio-item button">
-            <img src="images/quantum-simulator.png"
-               alt="Quantum simulator interface"
-               class="portfolio-thumb"
-               width="325"
-               height="325">
-            <h3 class="portfolio-title">
-              Quantum Simulator
-            </h3>
-            <p class="portfolio-description">
-              A quantum computer simulator.
-            </p>
-          </a>	
-
-          <a href="/collatz-tree" class="portfolio-item button">
-            <img src="images/collatz.png"
-               alt="Tree visualization of the Collatz conjecture"
-               class="portfolio-thumb"
-               width="325"
-               height="325">
-            <h3 class="portfolio-title">
-              Collatz Tree
-            </h3>
-            <p class="portfolio-description">
-              An interective visualization of the Collatz conjecture as a tree.
-            </p>
-          </a>	
-        </div>
-      </section>
-
-      <section>
-        <h2 id="donate">Donate:</h2>
-
-        <ul>
-          <li>This site accepts donations via BAT.</li>
-			    <li>
-            Monero:
-            
-            <span style="font-size: 0.7em; word-wrap: break-word;">42jHqUsEke6V9w9pcHZiGf3NNPd6ZiRiZUAxZ3YuML7CinY3RJqWaS4CQB2JisXVwn5h7kx9WwSoDifgiEW6j4C5JGd93Mz</span>
-          </li>
-        </ul>
-      </section>
-
-		</main>
-
-		<footer>footer thing idk</footer>
-	</body>
-</html>
+    <ul>
+      <li>This site accepts donations via BAT.</li>
+      <li>
+        Monero:
+        
+        <span style="font-size: 0.7em; word-wrap: break-word;">42jHqUsEke6V9w9pcHZiGf3NNPd6ZiRiZUAxZ3YuML7CinY3RJqWaS4CQB2JisXVwn5h7kx9WwSoDifgiEW6j4C5JGd93Mz</span>
+      </li>
+    </ul>
+  </section>
+{{ end }}

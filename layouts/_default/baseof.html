@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Bakaq</title>
+		<link rel="stylesheet" href="/index.css">
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	</head>
+
+	<body>
+    <header>
+      <h1 class="title">Bakaq</h1>
+    </header>
+
+    <nav>
+      <div class="subnav">
+        <a href="/" class="button">Home</a>
+        <a href="https://blog.bakaq.net" class="button">Blog</a>
+        <a href="/blogroll" class="button">Blogroll</a>
+        <a href="https://github.com/bakaq" class="button">Github</a>
+      </div>
+      <div class="subnav">
+        <a href="#donate" class="button">Donate</a>
+      </div>
+    </nav>
+
+		<main>
+      {{ block "main" . }}
+        {{ .Content }}
+      {{ end }}
+		</main>
+
+		<footer>footer thing idk</footer>
+	</body>
+</html>
