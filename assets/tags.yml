@@ -19,6 +19,6 @@ sqlite:
 webgl:
   name: WebGL
 pwa:
-  name: Pwa
+  name: PWA
 react:
   name: React
