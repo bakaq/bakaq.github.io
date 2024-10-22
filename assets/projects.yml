@@ -1,26 +1,56 @@
 - title: Kanji Search
   link: https://bakaq.net/kanji-search
+  repo: https://github.com/bakaq/kanji-search
   image:
     src: /images/kanji-search.png
     alt: An example of a search for a kanji with 2 components
   description: A tool to search for kanji by components.
   tags:
-    - web-dev
+    - frontend
+    - pwa
+    - typescript
+    - python
+- title: Market helper
+  link: https://bakaq.net/market-helper
+  repo: https://github.com/bakaq/market-helper
+  description: An application to help find the best prices per nutrient in groceries.
+  tags:
+    - frontend
+    - backend
+    - sqlite
+    - javascript
+    - rust
+    - react
 - title: Mandelbrot
   link: https://bakaq.net/mandelbrot-webgl
+  repo: https://github.com/bakaq/mandelbrot-webgl
   image:
     src: /images/mandelbrot.png
     alt: The Mandelbrot set
   description: An intractive mandelbrot visualization written with JavaScript and WebGL.
+  tags:
+    - frontend
+    - webgl
+    - javascript
+    - visualization
 - title: Quantum Simulator
   link: https://bakaq.net/quantum-simulator
+  repo: https://github.com/bakaq/quantum-simulator
   image:
     src: /images/quantum-simulator.png
     alt: Quantum simulator interface
   description: A quantum computer simulator.
+  tags:
+    - frontend
+    - javascript
+    - visualization
 - title: Collatz Tree
   link: https://bakaq.net/collatz-tree
+  repo: https://github.com/bakaq/collatz-tree
   image:
     src: /images/collatz.png
     alt: Tree visualization of the Collatz conjecture
   description: An interective visualization of the Collatz conjecture as a tree.
+  tags:
+    - frontend
+    - visualization

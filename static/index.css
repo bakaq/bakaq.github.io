@@ -113,17 +113,25 @@ main {
   align-items: center;
 }
 
+.project-links {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: var(--spacing);
+}
+
 .project-tags {
+  --tag-spacing: calc(var(--spacing) * 0.4);
   display: flex;
   flex-flow: row wrap;
   list-style-type: none;
   justify-content: flex-end;
+  gap: var(--tag-spacing);
   padding: 0;
 }
 
 .project-tags > li {
   font-size: 0.8rem;
   border: 1px solid;
-  padding: 0.1rem;
+  padding: 0 var(--tag-spacing);
   border-radius: var(--spacing);
 }

@@ -1,2 +1,24 @@
-web-dev:
-  name: "Web Dev"
+frontend:
+  name: Frontend
+backend:
+  name: Backend
+visualization:
+  name: Visualization
+
+javascript:
+  name: Javascript
+typescript:
+  name: Typescript
+rust:
+  name: Rust
+python:
+  name: Python
+
+sqlite:
+  name: SQLite
+webgl:
+  name: WebGL
+pwa:
+  name: Pwa
+react:
+  name: React
