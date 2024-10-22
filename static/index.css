@@ -7,28 +7,57 @@
   --button-hover-c: #5BF;
 
   /* Padding and border-radius */
-  --spacing: 0.5em;
+  --spacing: 0.5rem;
 }
 
-
-html {
-  height: 100%;
-  font-size: 16px;
+* {
+  box-sizing: border-box;
 }
 
 body {
   background-color: var(--background-c);
   margin: 0;
   padding: var(--spacing);
-  height: 100%;
-  box-sizing: border-box;
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
+  gap: var(--spacing);
 }
 
 body > * {
-  width: 95%;
+  width: 100%;
+  max-width: min(70ch, 95%);
+}
+
+header {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+nav {
+  display: flex;
+  flex-flow: row wrap;
+  gap: var(--spacing);
+
+  padding: var(--spacing);
+  background-color: var(--content-c);
+  border-radius: var(--spacing);
+}
+
+nav > a {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+footer {
+  text-align: center;
+}
+
+main {
+  padding: var(--spacing);
+  border-radius: var(--spacing);
+  background-color: var(--content-c);
 }
 
 .button {
@@ -46,74 +75,10 @@ body > * {
   color: #000;
 }
 
-/*** Header ***/
-
-header {
-  position: relative;
-  margin-bottom: var(--spacing);
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-}
-
-.title {
-  text-align: center;
-  margin: 0;
-  grid-column: 2;
-}
-
-.header-right {
-  display: flex;
-  flex-flow: row nowrap;
-  align-items: center;
-  justify-content: flex-end;
-}
-
-/*** Navbar ***/
-
-nav {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
-
-  padding: var(--spacing);
-  background-color: var(--content-c);
-  margin-bottom: var(--spacing);
-  border-radius: var(--spacing);
-  box-sizing: border-box;
-}
-
-.subnav {
-  display: flex;
-  flex-flow: row nowrap;
-  column-gap: var(--spacing);
-}
-
-.subnav > a {
-  box-sizing: border-box;
-  font-size: 1.1em;
-  font-weight: bold;
-}
-
-/*** Content ***/
-
-main {
-  box-sizing: border-box;
-  padding: var(--spacing);
-  border-radius: var(--spacing);
-  background-color: var(--content-c);
-}
-
-footer {
-  padding: var(--spacing) 0;
-  position: relative;
-  bottom: 0;
-  text-align: center;
-}
-
 .portfolio {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  grid-gap: var(--spacing);
+  gap: var(--spacing);
 }
 
 .portfolio-item {
@@ -150,11 +115,5 @@ footer {
 @media only screen and (min-width: 786px) {
   .portfolio {
     grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-@media only screen and (min-width: 992px) {
-  .portfolio {
-    grid-template-columns: repeat(4, 1fr);
   }
 }
