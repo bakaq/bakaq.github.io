@@ -1,0 +1,35 @@
+<h1>Projects</h1>
+
+{{ $tags := resources.Get "tags.yml" | transform.Unmarshal }}
+{{ $projects := resources.Get "projects.yml" | transform.Unmarshal }}
+
+<ul class="projects">
+  {{ range $projects }}
+  <li>
+    {{ with .image }}
+    <img src="{{ .src }}" alt="{{ .alt }}" width="325" height="325">
+    {{ end }}
+    <div class="project-info">
+      <h2>{{ .title }}</h2>
+
+      <div>
+        <div>
+          {{ with .link }}
+          <a href="{{ . }}">Link</a>
+          {{ end }}
+        </div>
+
+        {{ with .tags }}
+        <ul class="project-tags">
+          {{ range . }}
+          <li data-tag-id="{{ . }}">{{ (index $tags .).name }}</li>
+          {{ end }}
+        </ul>
+        {{ end }}
+      </div>
+
+      <p>{{ .description }}</p>
+    </div>
+  </li>
+  {{ end }}
+</ul>

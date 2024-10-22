@@ -46,8 +46,20 @@ nav {
 }
 
 nav > a {
+  border-radius: var(--spacing);
+  background-color: var(--button-c);
   font-size: 1.1rem;
   font-weight: bold;
+}
+
+nav > a:hover {
+  background-color: var(--button-hover-c);
+}
+
+nav > :is(a:link, a:visited) {
+  padding: var(--spacing);
+  text-decoration: none;
+  color: inherit;
 }
 
 footer {
@@ -60,60 +72,58 @@ main {
   background-color: var(--content-c);
 }
 
-.button {
-  border-radius: var(--spacing);
-  padding: var(--spacing);
+/*** Porfolio ***/
+
+.projects {
+  display: flex;
+  flex-flow: row wrap;
+  list-style-type: none;
+  gap: var(--spacing);
+  padding: 0;
+}
+
+.projects > li {
+  display: flex;
+  flex-flow: column nowrap;
   background-color: var(--button-c);
+  padding: var(--spacing);
+  border-radius: var(--spacing);
+  gap: var(--spacing);
+  width: min-content;
 }
 
-.button:hover {
-  background-color: var(--button-hover-c);
+.projects > li > img {
+  border-radius: var(--spacing);
 }
 
-.button:link, .button:visited {
-  text-decoration: none;
-  color: #000;
-}
-
-.portfolio {
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
+.project-info {
+  display: flex;
+  flex-flow: column nowrap;
   gap: var(--spacing);
 }
 
-.portfolio-item {
+.project-info > * {
+  margin: 0;
+}
+
+.project-info > div {
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.portfolio-thumb {
+.project-tags {
+  display: flex;
+  flex-flow: row wrap;
+  list-style-type: none;
+  justify-content: flex-end;
+  padding: 0;
+}
+
+.project-tags > li {
+  font-size: 0.8rem;
+  border: 1px solid;
+  padding: 0.1rem;
   border-radius: var(--spacing);
-  display: block;
-  max-width: 100%;
-  width: auto;
-  height: auto;
-}
-
-.portfolio-title {
-  margin: 0;
-  text-align: center;
-}
-
-.portfolio-description {
-  margin: 0;
-}
-
-/*** Media Queries ***/
-
-@media only screen and (min-width: 600px) {
-  .portfolio {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media only screen and (min-width: 786px) {
-  .portfolio {
-    grid-template-columns: repeat(3, 1fr);
-  }
 }

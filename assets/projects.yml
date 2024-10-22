@@ -1,0 +1,26 @@
+- title: Kanji Search
+  link: https://bakaq.net/kanji-search
+  image:
+    src: /images/kanji-search.png
+    alt: An example of a search for a kanji with 2 components
+  description: A tool to search for kanji by components.
+  tags:
+    - web-dev
+- title: Mandelbrot
+  link: https://bakaq.net/mandelbrot-webgl
+  image:
+    src: /images/mandelbrot.png
+    alt: The Mandelbrot set
+  description: An intractive mandelbrot visualization written with JavaScript and WebGL.
+- title: Quantum Simulator
+  link: https://bakaq.net/quantum-simulator
+  image:
+    src: /images/quantum-simulator.png
+    alt: Quantum simulator interface
+  description: A quantum computer simulator.
+- title: Collatz Tree
+  link: https://bakaq.net/collatz-tree
+  image:
+    src: /images/collatz.png
+    alt: Tree visualization of the Collatz conjecture
+  description: An interective visualization of the Collatz conjecture as a tree.
