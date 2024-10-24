@@ -2,11 +2,13 @@
 
 :root {
   /* Colors */
-  --background-color: #000;
-  --content-background-color: #0d1117;
-  --button-c: #238636;
-  --button-hover-c: #29903b;
-  --text-color: #FFF;
+  --background-color: #D6DDD2;
+  --content-background-color: #FEB;
+  --button-color: #91C4EA;
+  --button-hover-color: #9FCEEE;
+  --text-color: #000;
+  --link-color: blue;
+  --link-visited-color: purple;
 
   /* Padding and border-radius */
   --spacing: 0.5rem;
@@ -15,11 +17,13 @@
 @media (prefers-color-scheme: dark) {
   :root {
     /* Colors */
-    --background-color: #CCC;
-    --content-background-color: #FEB;
-    --button-c: #7BE;
-    --button-hover-c: #5BF;
-    --text-color: #000;
+    --background-color: #000;
+    --content-background-color: #0d1117;
+    --button-color: hsl(240, 75%, 25%);
+    --button-hover-color: hsl(240, 75%, 20%);
+    --text-color: #DDD;
+    --link-color: #8b8be6;
+    --link-visited-color: #c47cc4;
   }
 }
 
@@ -32,6 +36,7 @@ html {
 }
 
 body {
+  color: var(--text-color);
   background-color: var(--background-color);
   margin: 0;
   padding: var(--spacing);
@@ -39,6 +44,14 @@ body {
   flex-flow: column nowrap;
   align-items: center;
   gap: var(--spacing);
+}
+
+body a {
+  color: var(--link-color);
+}
+
+body a:visited {
+  color: var(--link-visited-color);
 }
 
 body > * {
@@ -64,13 +77,13 @@ nav {
 
 nav > a {
   border-radius: var(--spacing);
-  background-color: var(--button-c);
+  background-color: var(--button-color);
   font-size: 1.1rem;
   font-weight: bold;
 }
 
 nav > a:hover {
-  background-color: var(--button-hover-c);
+  background-color: var(--button-hover-color);
 }
 
 nav > :is(a:link, a:visited) {
@@ -106,7 +119,7 @@ main {
   flex-flow: column nowrap;
   gap: var(--spacing);
 
-  background-color: var(--button-c);
+  background-color: var(--button-color);
   padding: var(--spacing);
   border-radius: var(--spacing);
   width: min-content;
