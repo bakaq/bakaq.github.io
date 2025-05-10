@@ -1,18 +1,18 @@
-<h1>Projects</h1>
-
 {{ $tags := resources.Get "tags.yml" | transform.Unmarshal }}
 {{ $projects := resources.Get "projects.yml" | transform.Unmarshal }}
 
 <ul class="projects">
   {{ range $projects }}
   <li>
-    {{ with .image }}
-    <img src="{{ .src }}" alt="{{ .alt }}" width="325" height="325">
-    {{ else }}
-    <div style="width: 325px; height: 325px; text-align: center; line-height: 325px;">
-      No image yet
-    </div>
-    {{ end }}
+    <a href="{{ .link }}">
+      {{ with .image }}
+      <img src="{{ .src }}" alt="{{ .alt }}" width="325" height="325">
+      {{ else }}
+      <div style="width: 325px; height: 325px; text-align: center; line-height: 325px;">
+        No image yet
+      </div>
+      {{ end }}
+    </a>
     <div class="project-info">
       <h2>{{ .title }}</h2>
 

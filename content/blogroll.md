@@ -2,8 +2,6 @@
 title: Blogroll
 ---
 
-# Blogroll
-
 These are some blogs I like, in no particular order.
 
 - https://smallcultfollowing.com/babysteps/ - Mostly content about possible improvements to the
